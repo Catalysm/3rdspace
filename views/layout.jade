@@ -3,9 +3,27 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/960grid.css')
 
   block head
     script(src='assets/application.js')
 
   body
+    nav
+      ul
+        li
+          em
+            a(href='/new') WHAT'S NEW
+        li
+          em
+            a(href='/join') JOIN
+        li
+          em
+            a(href='/login') LOGIN
     block content
+    .footer
+      p CREATED by
+        a(href='http://catalysm.co/', target='#')
+          img#catLogo(src='images/catLogo.png')
+      p
+        a(href='mailto:info@catalysm.co') CONTACT

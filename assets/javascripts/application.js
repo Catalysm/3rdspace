@@ -4,16 +4,16 @@
 //= require backbone
 
 // app
-//= require app
+//= require thirdspace
 
 // models
-//= require models/personModel
+//= require models/memberModel
 
 // collections
-//= require collections/peopleCollection
+//= require collections/membersCollection
 
 // views
-//= require views/personView
-//= require views/peopleView
+//= require views/memberView
+//= require views/membersView
 
 // routes

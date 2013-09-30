@@ -10,7 +10,8 @@
     "jade": "*",
     "coffee-script": "~1.6.3",
     "mincer": "~0.5.7",
-    "mongoose": "~3.6.18"
+    "mongoose": "~3.6.18",
+    "passport": "~0.1.17"
   },
   "devDependencies": {
     "nodemon": "*"
