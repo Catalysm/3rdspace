@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  for invitee in invitees
+    table
+      tr
+        td
+          a(href='/invitees/#{invitee.id}') #{invitee.name.first} #{invitee.name.last}
+        td #{invitee.email}

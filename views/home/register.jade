@@ -3,7 +3,7 @@ extends home
 block content
 
   h1 Register
-  form#signup(action="/members", method='post')
+  form#register(action="/members", method='post')
 
     label(for='first_name') First name
     input#first_name(type='text', name='first_name', placeholder='Jon', autofocus, required)

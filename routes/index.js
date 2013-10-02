@@ -1,21 +1,28 @@
+/*jshint node:true, laxcomma:true */
+"use strict";
 
-/*
- * GET home page.
+
+/**
+ * Home
  */
 
-var Member = require('../models/member');
+exports.login = function(req, res) {
+  res.render('home/login', { title: '3rdspace', member: req.member });
+};
 
-exports.index = function(req, res, next){
+exports.register = function(req, res) {
+  res.render('home/register', { title: '3rdspace' });
+};
+
+
+/*
+ * Index.
+ */
+
+exports.index = function(req, res){
   if (req.member) {
     var member = req.member;
-
-    Member.find({ members: { $in: [ member ] } }).populate('members', { id: true, name: true, email: true }).exec(function(err) {
-      if (err) {
-        return next(err);
-      }
-
-      return res.render('index', { title: '3rdspace', member: member });
-    });
+    return res.render('index', { title: '3rdspace', member: member });
   } else {
     return res.render('home/index');
   }
