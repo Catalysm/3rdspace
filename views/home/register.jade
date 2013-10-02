@@ -1,0 +1,20 @@
+extends home
+
+block content
+
+  h1 Register
+  form#signup(action="/members", method='post')
+
+    label(for='first_name') First name
+    input#first_name(type='text', name='first_name', placeholder='Jon', autofocus, required)
+
+    label(for='last_name') Last name
+    input#last_name(type='text', name='last_name', placeholder='Snow', required)
+
+    label(for='email') Email
+    input#email(type='email', name='email', placeholder='jon@thewall.com', required)
+
+    label(for='password') Password
+    input#password(type='password', name='password', placeholder='Password', required)
+
+    input(type='submit')

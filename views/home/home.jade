@@ -1,0 +1,21 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/960grid.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+  body
+    nav
+      ul
+        li
+          em
+            a(href='/new') WHAT'S NEW
+        li
+          em
+            a(href='/register') REGISTER
+        li
+          em
+            a(href='/login') LOGIN
+    .container_12
+      block content

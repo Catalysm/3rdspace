@@ -1,7 +1,7 @@
 ((Thirdspace, Backbone) ->
   "use strict"
 
-  Thirdspace.Views.Member = Backbone.View.extend(
+Thirdspace.Views.Member = Backbone.View.extend(
     # your View goes here
   )
 

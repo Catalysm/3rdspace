@@ -1,0 +1,150 @@
+extends home
+
+block content
+  .main
+    img.logotype(src='images/3rdspace_logotype.png')
+    h3
+      em A creative lab designed for the mind. 
+      | Located in Port Townsend, WA.
+    h4
+      em Launching Fall 2013.
+  
+  section
+
+    h2 Designed for the Mind
+  
+    p As soon as you walk in, outside distraction turns down. All you see are clean surfaces and creative minds ready to shape and share ideas.
+  
+  section
+
+    h2 Stay in Flow
+  
+    p Creation is the mind in motion. Flow. Unlike spaces like libraries and coffee shops you aren't your motion isn't muted or suppressed. Move freely, bounce ideas off minds and surfaces, or, pick a corner, focus, flow.
+  
+  section
+  
+    h2 Stay focused
+  
+  section
+
+    h2 Connect with other creators
+  
+    p Collaborate. Share knowledge to earn "mindshare" among peers.
+  
+  section
+  
+    h2 Good Tools
+  
+    p
+      em Focus on your work, not your workspace.
+  
+    ul
+      li Distraction free space
+      li Clean surfaces and clear lighting
+      li Easy access to electricity and wifi
+      li Unlimited, fresh roasted coffee from Bjur Brews ($2/session)
+  
+  section
+
+    h2 Real Hours
+    
+    h3
+      em 6 to 12 am & pm. We're awake when you are.
+    
+    ul
+      li
+        strong 7 days 
+        | a week, two sessions each day
+      li
+        | AM session: 
+        strong 6AM - 12Noon
+      li
+        | PM session: 
+        strong 6PM - 12Midnight
+  
+  section
+
+    h2 Honest Prices
+  
+    h3
+      em Easy cancellation. No long-term contracts. No bullsh*t fees.
+    
+    p
+      | Everyone starts with a 
+      strong 10 Session Free Trial
+      | . Afterword pick the plan that fits your needs and budget.
+    
+    p STARTER ACCESS
+    
+    ul
+      li
+        strong 1 session 
+        | each day; your choice of AM 
+        em or 
+        | PM
+      li
+        strong 1 
+        | guest pass per mo
+      li
+        strong $20 
+        | charged every 30 days
+    
+    p FULL ACCESS
+    
+    ul
+      li
+        strong both sessions 
+        | each day; AM 
+        em and 
+        | PM
+      li
+        strong 2 
+        | guest passes
+      li
+        strong $35 
+        | charged every 30 days
+  
+    hr
+  
+    p EXTRAS (per session)
+    
+    ul
+      li
+        strong On Demand Access
+        | : 
+        strong $5 
+        | per session; just show up, pay and plug-in.
+      li
+        strong Unlimited Coffee
+        | : 
+        strong $2 
+        | per session.
+  
+  section
+    h1 Get Invited
+    
+    p For now, we're in invite-only beta while we fine tune the space and the experience.
+    
+    p We're looking for bright people who want to grow 3rdspace with us (and are ok with the occasional start-up bumps). Located in 
+      strong Port Townsend, WA
+      | .
+    
+    hr
+    
+    p
+      em
+        | Includes Free, 
+        strong 10 Session trial access
+        | . No card, no risk.
+    
+    form(action='/invitees', method='post')
+      label(for='first_name') First name
+      input#first_name(type='text', name='first_name', placeholder='Jon', autofocus, required)
+
+      label(for='last_name') Last name
+      input#last_name(type='text', name='last_name', placeholder='Snow', required)
+
+      label(for='email') Email
+      input#email(type='email', name='email', placeholder='jon@thewall.com', required)
+      
+      input(type='submit', value='GET INVITED')

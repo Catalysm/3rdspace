@@ -11,7 +11,10 @@
     "coffee-script": "~1.6.3",
     "mincer": "~0.5.7",
     "mongoose": "~3.6.18",
-    "passport": "~0.1.17"
+    "passport": "~0.1.17",
+    "jshint": "~2.1.11",
+    "nodemailer": "~0.5.2",
+    "bcrypt": "0.7.6"
   },
   "devDependencies": {
     "nodemon": "*"

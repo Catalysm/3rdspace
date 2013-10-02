@@ -1,0 +1,21 @@
+extends home
+
+block content
+
+  h1 Log In
+
+  form(action="/login", method="post")
+    input#email(type="text", name='email', placeholder='email', autofocus)
+
+    br
+
+    input#password(type='password', name='password', placeholder='password')
+
+    br
+
+    input(type="checkbox", name="rememberme")
+    label(for='rememberme') Remember me
+
+    br
+
+    input(type='submit', value='Log In')

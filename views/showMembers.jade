@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  for member in members
+    table
+      tr
+        td
+          a(href='/members/#{member.id}') #{member.name.first} #{member.name.last}
+        td #{member.email}
