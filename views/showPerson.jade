@@ -21,7 +21,7 @@ block content
         for note in notes
           .personNote
             p= note.content
-            span Posted by #{note.creator}. – #{note.created_at.toDateString()} #{note.created_at.getTime()}
+            span Posted by #{note.creator}. – #{note.created_at.toDateString()}
 
       #personHistory
         h3 PERSON HISTORY
