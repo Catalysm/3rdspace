@@ -6,14 +6,12 @@
  * Module dependencies.
  */
 
-
 var express = require('express')
   , http = require('http')
   , path = require('path')
   , mongoose = require('mongoose')
   , passport = require('passport')
   , assets = require('./config/assets');
-
 
 var app = express();
 
@@ -61,8 +59,7 @@ if ('development' == app.get('env')) {
 
 
 var routes = require('./routes')
-  , invitee = require('./routes/invitee')
-  , member = require('./routes/member');
+  , person = require('./routes/person');
 
 
 //============ Home:
@@ -74,31 +71,26 @@ app.get('/register', routes.register);
 //============ Index:
 
 app.get('/', routes.index);
+app.get('/timeline', routes.timeline);
 
 
-//============ Invitees:
+//============ People:
 
-// new invite
-app.post('/invitees', invitee.POSTinvitee);
+//Post a new person
+app.post('/people', person.register);
 
-//Get a single invitee by id
-app.get( '/invitees/:id', invitee.GETinvitee);
+//Get a single person by id
+app.get( '/people/:id', person.person);
 
-//Get a list of all invitees
-app.get( '/invitees', invitee.GETinvitees);
+app.post( '/people/:id/notes', person.note);
 
+//Get a list of all people
+app.get( '/people', person.people);
 
-//============ Members:
-
-//Post a new member
-app.post('/members', member.POSTmember);
-
-//Get a single member by id
-app.get( '/members/:id', member.GETmember);
-
-//Get a list of all members
-app.get( '/members', member.GETmembers);
-
+/*
+//Put a new person
+app.put('/people/:id', person.person);
+*/
 
 // * * * //
 http.createServer(app).listen(app.get('port'), function(){

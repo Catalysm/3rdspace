@@ -5,21 +5,36 @@ var mongoose = require('mongoose')
   , bcrypt = require('bcrypt')
   , SALT_WORK_FACTOR = 10;
 
-// MemberSchema
-var MemberSchema = new mongoose.Schema({
+
+// Person note
+var Note = new mongoose.Schema({
+  content: { type: String },
+  created_at: { type: Date },
+  creator: { type: String }
+});
+
+
+// Member Schema
+var PersonSchema = new mongoose.Schema({
   name: {
     first: { type: String },
     last: { type: String }
   },
-  email: { type: String, unique: true, required: true },
-  password: { type: String },
+  email_address: { type: String, unique: true, required: true },
   admin: { type: Boolean },
-  accessToken: { type: String } // Used for Remember Me
+  created: { type: Date },
+  creator: { type: String },
+  notes: [ Note ]
 });
 
+/*
 // Bcrypt middleware
 MemberSchema.pre('save', function(next) {
   var member = this;
+
+  if (this.isNew) {
+    this.start_date = new Date();
+  };
 
   if(!member.isModified('password')) return next();
 
@@ -42,6 +57,6 @@ MemberSchema.methods.comparePassword = function(candidatePassword, cb) {
   });
 };
 
-var Member = mongoose.model('Member', MemberSchema);
+*/
 
-module.exports = mongoose.model('Member', MemberSchema);
+module.exports = mongoose.model('Person', PersonSchema);

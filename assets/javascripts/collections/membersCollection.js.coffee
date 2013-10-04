@@ -2,7 +2,11 @@
   "use strict"
 
   Thirdspace.Collections.Members = Backbone.Collection.extend(
-    # your Collection goes here
+    model: Thirdspace.Models.Member
+    url: "/members"
+
+    comparator: (model) ->
+      model.get "id"
 
   )
 

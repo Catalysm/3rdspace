@@ -14,6 +14,6 @@
 
 // views
 //= require views/memberView
-//= require views/membersView
+// require views/membersView
 
 // routes
