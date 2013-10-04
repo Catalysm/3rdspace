@@ -1,31 +1,32 @@
 extends layout
 
 block content
-  h3 #{person.name.first} #{person.name.last}
-  a(href='mailto:#{person.email_address}') #{person.email_address}
+  #Person
+    .grid_12
+      h1 #{person.name.first} #{person.name.last}
+      a(href='mailto:#{person.email_address}') #{person.email_address}
 
-  form(action='/people/#{person.id}/notes', method='post')
-    textarea(name='content') #{person.name.first} #{person.name.last} checked in.
-    if person
-      select(name='creator', required)
-        option(value='') Select admin
-        for person in people
-          if person.admin
-              option(value='#{person.name.first} #{person.name.last}') #{person.name.first} #{person.name.last}
-    input(type='submit', value='Add a note')
+      form(action='/people/#{person.id}/notes', method='post')
+        textarea(name='content') #{person.name.first} #{person.name.last} checked in.
+        if person
+          select(name='creator', required)
+            option(value='') Select admin
+            for person in people
+              if person.admin
+                  option(value='#{person.name.first} #{person.name.last}') #{person.name.first} #{person.name.last}
+        input(type='submit', value='Add a note')
 
-  h3 Notes
-  for note in notes
-      p= note.content
-      span Posted by #{note.creator}. On #{note.created_at}
-      hr
+      #personNotes
+        h3 NOTES
+        for note in notes
+          .personNote
+            p= note.content
+            span Posted by #{note.creator}. – #{note.created_at.toDateString()} #{note.created_at.getTime()}
 
-  h3 Person history
+      #personHistory
+        h3 PERSON HISTORY
 
-  table
-    for event in timeline
-      if event.subject == person.id
-        tr
-          td= event.creator
-          td= event.description
-          td= event.date
+        ul
+          for event in timeline
+            if event.subject == person.id
+              li #{event.creator} #{event.description} – #{event.date.toDateString()}

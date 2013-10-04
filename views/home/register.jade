@@ -1,36 +1,36 @@
-extends home
+extends ../layout
 
 block content
+  .grid_6.push_4
+    h1 Register
+    form(action="/people", method='post')
 
-  h1 Register
-  form#register(action="/people", method='post')
+      label(for='first_name') First name
+      input#first_name(type='text', name='first_name', placeholder='Jon', autofocus, required)
 
-    label(for='first_name') First name
-    input#first_name(type='text', name='first_name', placeholder='Jon', autofocus, required)
+      label(for='last_name') Last name
+      input#last_name(type='text', name='last_name', placeholder='Snow', required)
 
-    label(for='last_name') Last name
-    input#last_name(type='text', name='last_name', placeholder='Snow', required)
+      label(for='email') Email
+      input#email(type='email', name='email', placeholder='jon@thewall.com', required)
 
-    label(for='email') Email
-    input#email(type='email', name='email', placeholder='jon@thewall.com', required)
+      label(for='admin') Admin?
+      input(type='checkbox', name='admin')
 
-    label(for='admin') Admin?
-    input(type='checkbox', name='admin')
-
-    label(for='event') Add an event
-    textarea(name='description') Person created.
-
-
-    if people
-      p Created by
-      select(name='creator')
-        option(value='Self') Self
-        for person in people
-          if person.admin
-              option(value='#{person.name.first} #{person.name.last}') #{person.name.first} #{person.name.last}
-    else
-      select(name='creator')
-        option(value=null) Self
+      label(for='event') Add an event
+      textarea(name='description') Person created.
 
 
-    input(type='submit')
+      if people
+        p Created by
+        select(name='creator')
+          option(value='Self') Self
+          for person in people
+            if person.admin
+                option(value='#{person.name.first} #{person.name.last}') #{person.name.first} #{person.name.last}
+      else
+        select(name='creator')
+          option(value=null) Self
+
+
+      input(type='submit')

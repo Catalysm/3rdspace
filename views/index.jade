@@ -1,5 +1,39 @@
-extends layout
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/960grid.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+  
+  body
+    .container_12
+      #main
+        img(src='/images/3s-logo-700.png')
 
-block content
-  .container_12
-    #content
+        p a CREATIVE LAB
+        p
+          strong SPECIFICALLY DESIGNED
+        | for THE MIND
+
+        p located in
+        p
+          strong UPTOWN, PT / WA
+
+      .grid_3
+        h3 ACCESS
+        p We're currently in beta while we refine the space.
+
+      .grid_3.push_6
+        h3 HOURS
+        p We're awake when you are -
+        p 6pm to 12 Midnight 6 days a week.
+        p Closed Monday. Every Monday.
+
+
+      #footer
+        p CREATED by
+          a(href='http://catalysm.co/', target='#')
+            img#catLogo(src='/images/catLogo.png')
+        p
+          a(href='mailto:info@catalysm.co') CONTACT

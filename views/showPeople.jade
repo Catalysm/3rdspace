@@ -1,9 +1,11 @@
 extends layout
 
 block content
-  for person in people
-    table
-      tr
-        td
-          a(href='/people/#{person.id}') #{person.name.first} #{person.name.last}
-        td #{person.email}
+  .grid_12
+    #peopleMain
+      ul
+        for person in people
+          li
+            a(href='/people/#{person.id}') #{person.name.first} #{person.name.last} 
+              if person.admin
+                | (admin)

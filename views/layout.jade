@@ -10,15 +10,22 @@ html
     script(src='assets/application.js')
 
   body
-    nav
-      ul
-        li
-          a(href='/people') PEOPLE
-        li
-          a(href='/register') REGISTER
-    block content
+    .container_12
+      #logoMain
+        img(src='/images/3s-logo-hz-620.png')
+      nav
+        ul
+          .grid_3
+            li
+              a(href='/register')
+                button#register REGISTER
+          .grid_3.push_6
+            li
+              a(href='/people')
+                button#people PEOPLE
+      block content
 
-    .footer
+    #footer
       p CREATED by
         a(href='http://catalysm.co/', target='#')
           img#catLogo(src='/images/catLogo.png')

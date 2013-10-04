@@ -1,44 +1,160 @@
 body {
   font: 16px "BaskervilleRegular";
   color: #000000;
-  background-color: #fff;
+  background-color: #F6F8F8;
   padding: 30px;
+  margin: 0;
 }
 
 a {
-  color: #3CADE2;
-  font-size: 14px;
+  color: #62B4D2;
 }
 
-label {
-  margin-top: 20px;
+h3 {
+  color: #FB8168;
+  padding-bottom: 22px;
 }
 
-input, label {
-  display: block;
+#main {
+  text-align: center;
+  margin-top: 140px;
 }
 
-[type='radio'] {
-  display: inline-block;
-  margin-left: 20px;
+#main img {
+  padding: 60px;
 }
 
 #catLogo {
   margin-bottom: -4px;
   margin-left: 6px;
 }
+input {
+  display: block;
+  margin-bottom: 16px;
+}
 
-.footer p {
+#logoMain {
+  padding: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+#Person {
+  padding-top: 60px;
+}
+
+#footer {
+  padding-top: 60px;
+  clear: both;
+}
+#footer p {
   text-align: center;
 }
 
-select {
-  display: block;
+#personHistory {
+  color: #A9A9A9;
+  padding-top: 30px;
+  font-size: 10px;
+}
+#personHistory li {
+  padding-bottom: 6px;
+  margin-left: -40px;
+  padding-left: 0;
 }
 
-span {
-  font-size: 10px;
-  color: #555;
+#personHistory h3 {
+  color: #000;
+}
+
+#personNotes {
+  padding-top: 30px;
+}
+#personNotes span {
+  font-size: 12px;
+  color: #A9A9A9;
+}
+
+.personNote {
+  border-bottom: 1px solid #A9A9A9;
+  margin-bottom: 60px;
+  padding-bottom: 22px;
+}
+
+select {
+  margin-top: 12px;
+}
+
+button, [type=submit], [type=text], [type=email] {
+  width: 220px;
+  height: 30px;
+  margin-top: 8px;
+  background-color: #fff;
+  border: 2px solid #62B4D2;
+  font-size: 12px;
+  color: #62B4D2;
+  change-case: uppercase;
+  font-weight: bold;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  outline: none;
+  letter-spacing: 1px;
+}
+[type=text], [type=email] {
+  text-indent: 8px;
+  font-size: 16px;
+  width: 300px;
+  color: #000;
+  border: 1px solid #62B4D2;
+}
+
+textarea {
+  display: block;
+  width: 280px;
+  background-color: #fff;
+  border: 1px solid #62B4D2;
+  margin-top: 16px;
+  padding: 10px;
+  height: 140px;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+}
+
+#register {
+  background-color: #fff;
+  border: 2px solid #FB8168;
+  font-size: 12px;
+  color: #FB8168;
+  font-weight: bold;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+#register:hover {
+  background-color: #FB8168;
+  color: #fff;
+}
+
+button:hover, [type=submit]:hover {
+  background-color: #62B4D2;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#peopleMain {
+  margin-top: 140px;
+}
+
+#peopleMain li {
+  
+  padding: 8px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 

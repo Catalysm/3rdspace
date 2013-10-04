@@ -37,7 +37,7 @@ app.configure(function(){
 
 
 // mongoose connect
-mongoose.connect( 'mongodb://localhost/3rdspacepre' );
+mongoose.connect( 'mongodb://localhost/3rdspace' );
 
 var db = mongoose.connection;
 
