@@ -9,7 +9,7 @@ var mongoose = require('mongoose')
 // Person note
 var Note = new mongoose.Schema({
   content: { type: String },
-  created_at: { type: Date },
+  created_at: { type: Date, default: Date.now },
   creator: { type: String }
 });
 
@@ -22,7 +22,7 @@ var PersonSchema = new mongoose.Schema({
   },
   email_address: { type: String, unique: true, required: true },
   admin: { type: Boolean },
-  created: { type: Date },
+  created: { type: Date, default: Date.now },
   creator: { type: String },
   notes: [ Note ]
 });

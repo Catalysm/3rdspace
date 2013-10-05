@@ -17,7 +17,6 @@ exports.register = function(req, res){
     },
     email_address: req.body.email,
     admin: req.body.admin,
-    created: new Date(),
     creator: req.body.creator
   });
   person.save(function(err) {
@@ -26,7 +25,6 @@ exports.register = function(req, res){
     } else {
       var moment = new Event({
         description: req.body.description,
-        date: new Date(),
         creator: req.body.creator,
         subject: person.id
       });
@@ -47,7 +45,6 @@ exports.note = function(req, res){
   return Person.findById( req.params.id, function( err, person ) { 
     person.notes.push({
       content: req.body.content,
-      created_at: new Date(),
       creator: req.body.creator
     });
     person.save(function(err) {
@@ -56,7 +53,6 @@ exports.note = function(req, res){
     } else {
       var moment = new Event({
         description: " added a note.",
-        date: new Date(),
         creator: req.body.creator,
         subject: person.id
       });

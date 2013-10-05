@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 var EventSchema = new mongoose.Schema({
   description: { type: String },
-  date: { type: Date },
+  date: { type: Date, default: Date.now },
   creator: { type: String },
   subject: { type: mongoose.Schema.Types.Mixed }
 });
